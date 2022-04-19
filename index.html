@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML APIs</title>
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/estiloss.css">
+<h1>HTML APIs</h1>
+<h2>Web Storage</h2>
+
+    <h2>Ejemplo 1 de Web Storage</h2>
+    <h2>Contador con window.localStorage</h2>
+    <script>
+        function clickCounter() {
+          if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+              localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+              localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML ="Ha hecho clic en el botón " + localStorage.clickcount + " time(s).";
+          } else {
+            document.getElementById("result").innerHTML = "Lo sentimos, su navegador no es compatible con el almacenamiento web...";
+          }
+        }
+
+        </script>
+ 
+        
+        <p>El siguiente ejemplo cuenta el número de veces que un usuario ha hecho clic en un botón. En este código, la cadena de valor se convierte en un número para poder aumentar el contador</p>
+        <p>Funcion usada= window.localStorage- almacena datos sin fecha de caducidad</p>
+            
+        <p><button onclick="clickCounter()" type="button">Click here!</button></p>
+        <div id="result"></div>
+        <p>Haga clic en el botón para ver el aumento del contador.</p>
+        <p><b>OBS:</b>Cierre la pestaña (o ventana) del navegador e intente nuevamente, y el contador continuará contando (no se reinicia).</p><br><br>
+
+
+
+
+
+
+
+
+        <h2>Web Workers APIs</h2>
+        
+            <h2>Ejemplo 1 de Web Workers</h2>
+            <p>Un trabajador web es un JavaScript que se ejecuta en segundo plano, independientemente de otros scripts, sin afectar el rendimiento de la página. Puede continuar haciendo lo que quiera: hacer clic, seleccionar cosas, etc., mientras el trabajador web se ejecuta en segundo plano.</p>
+            <a href="trabajador.html">Probar un trabajador Web</a>  
+
+         
+
+
+</body>
+</html>
